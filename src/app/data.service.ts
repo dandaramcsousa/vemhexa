@@ -9,6 +9,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getSchedule() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users')
+    return this.http.get('../assets/data.json')
   }
 }

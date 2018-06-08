@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ScheduleComponent implements OnInit {
 
   schedule$: Object;
+  team$: Object;
 
   constructor(private data: DataService) { }
 
@@ -18,5 +19,4 @@ export class ScheduleComponent implements OnInit {
       data => this.schedule$ = data
     )
   }
-
 }
