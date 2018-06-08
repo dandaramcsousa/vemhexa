@@ -5,17 +5,20 @@
 
 <nav class="nav">
 <ul>
+  <li *ngFor="let team of team$">
+    {{ team.name }}
+  </li>
   <li *ngFor="let group of schedule$.groups">
     <a>Grupo {{ group.name }}</a>
 
     <div>
       <li *ngFor="let match of group.matches">
         <div>
-          <img src="assets/flags/brazil.svg" alt="" height=20 width=20>
+          <img src="{{getTeam(match.home_team).flag}}" alt="" height=20 width=20>
           <input type="tel" style="width: 20px;" min="0" step="1"/>
           <b>X</b>
           <input type="tel" style="width: 20px;" min="0" step="1"/>
-          <img src="assets/flags/germany.svg" alt="" height=20 width=20>
+          <img src="{{getTeam(match.away_team).flag}}" alt="" height=20 width=20>
         </div>
       </li>
     </div>
